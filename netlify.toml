@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  # This is a Vite + React site, not Next.js: skip the Next.js runtime plugin
+  # that is enabled in the Netlify UI.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
